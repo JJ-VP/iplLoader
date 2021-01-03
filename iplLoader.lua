@@ -8,7 +8,15 @@ modLoaded = true
 
 
 function teleportHome()
-	ENTITY.SET_ENTITY_COORDS_NO_OFFSET(PLAYER.GET_PLAYER_PED(PLAYER.PLAYER_ID()), -63.477, -786.490, 44.227)
+	local vehicle
+	local player = PLAYER.GET_PLAYER_PED(PLAYER.PLAYER_ID())
+
+	if PED.IS_PED_IN_ANY_VEHICLE(player) then
+		vehicle = PED.GET_VEHICLE_PED_IS_USING(player)
+		ENTITY.SET_ENTITY_COORDS_NO_OFFSET(vehicle, -63.477, -786.490, 44.227)
+	else
+		ENTITY.SET_ENTITY_COORDS_NO_OFFSET(player, -63.477, -786.490, 44.227)
+	end
 	return 1
 end
 
