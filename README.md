@@ -6,7 +6,6 @@ Feel free to Crtl+C Ctrl+V - if you are copying this shit code, you need mental 
 I'm sure someone that actually knows lua could make this 10x better and 10x more efficiently but I wanted to learn and I wanted an IPL loader, so here we are.<br>
 
 * Bugs:
-	* Casino - Loading is weird
 	* Casino - Sometime you get stuck on nothing and need to noclip to unstuck urself.
 
 * 0.1
