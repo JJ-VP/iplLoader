@@ -6,7 +6,16 @@ modLoaded = true
 
 
 function teleportHome()
-	entity.set_entity_coords_no_offset(player.get_player_ped(player.player_id()), v3(-63.477, -786.490, 44.227))
+	local vehicle
+	local player = player.get_player_ped(player.player_id())
+	local position = v3(-63.477, -786.490, 44.227)
+
+	if ped.is_ped_in_any_vehicle(player) then
+		vehicle = ped.get_vehicle_ped_is_using(player)
+		entity.set_entity_coords_no_offset(vehicle, position)
+	else
+		entity.set_entity_coords_no_offset(player, position)
+	end
 	return HANDLER_POP
 end
 
