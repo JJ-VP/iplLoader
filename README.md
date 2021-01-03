@@ -1,5 +1,5 @@
 Big Thanks to the 2T1M devs for making actual useful documentation, made this far less painless.<br>
-Big Thanks to -IN2_Moist-#4078 (MoistScript), haekkzer#1337 (2Take1Script), Proddy#7272 (OmniSpawner & Metamorhosis) These are the scripts i read to understand lua
+Big Thanks to -IN2_Moist-#4078 (MoistScript), haekkzer#1337 (2Take1Script), Proddy#7272 (OmniSpawner & Metamorhosis) These are the scripts i read to understand lua.<br>
 Sorry for my spagetti code, this is the first time i'v ever touched lua. Please be nice.<br>
 Feel free to Crtl+C Ctrl+V - if you are copying this shit code, you need mental help.<br>
 
