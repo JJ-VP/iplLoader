@@ -1,11 +1,5 @@
 require("natives-1606100775")
 
--- System Functions
-system = {
-	["wait"] = util.yield,
-	["yield"] = util.yield
-}
-
 if modLoaded then
 	util.toast("iplLoader is already loaded.")
 	return 
@@ -89,15 +83,15 @@ function tpCasino()
 	if PED.IS_PED_IN_ANY_VEHICLE(player) then
 		vehicle = PED.GET_VEHICLE_PED_IS_USING(player)
 		ENTITY.SET_ENTITY_COORDS_NO_OFFSET(vehicle, 1109.996, 222.625, -49.841)
-		system.wait(100)
+		util.yield(100)
 		ENTITY.SET_ENTITY_COORDS_NO_OFFSET(vehicle, 1109.996, 222.625, -49.841)
-		system.wait(1000)
+		util.yield(1000)
 		ENTITY.SET_ENTITY_COORDS_NO_OFFSET(vehicle, 1109.996, 222.625, -49.841)
 	else
 		ENTITY.SET_ENTITY_COORDS_NO_OFFSET(player, 1109.996, 222.625, -49.841)
-		system.wait(100)
+		util.yield(100)
 		ENTITY.SET_ENTITY_COORDS_NO_OFFSET(player, 1109.996, 222.625, -49.841)
-		system.wait(1000)
+		util.yield(1000)
 		ENTITY.SET_ENTITY_COORDS_NO_OFFSET(player, 1109.996, 222.625, -49.841)
 	end
 	return 1
@@ -359,7 +353,7 @@ end
 function cleanTrailer()
 	STREAMING.REMOVE_IPL("TrevorsMP")
 	STREAMING.REQUEST_IPL("TrevorsTrailerTidy")
-	system.wait(50)
+	util.yield(50)
 	ENTITY.SET_ENTITY_COORDS_NO_OFFSET(PLAYER.GET_PLAYER_PED(PLAYER.PLAYER_ID()), 1975.552, 3820.538, 33.44833)
 	return 1
 end
@@ -367,7 +361,7 @@ end
 function dirtyTrailer()
 	STREAMING.REMOVE_IPL("TrevorsTrailerTidy")
 	STREAMING.REQUEST_IPL("TrevorsMP")
-	system.wait(50)
+	util.yield(50)
 	ENTITY.SET_ENTITY_COORDS_NO_OFFSET(PLAYER.GET_PLAYER_PED(PLAYER.PLAYER_ID()), 1975.552, 3820.538, 33.44833)
 	return 1
 end
